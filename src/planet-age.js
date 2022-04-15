@@ -14,14 +14,19 @@ export class Person {
     ];
   }
 
-  ageOnPlanet(planetYears) {
-    const ageNum = this.age / planetYears;
+  ageOnPlanet(planetYears, age) {
+    const ageNum = age / planetYears;
     return Math.round(ageNum * 10) / 10;
   }
 
   calculateAllAges(planetArray) {
     for (let i = 0; i < planetArray.length; i += 2) {
-      this[planetArray[i]] = this.ageOnPlanet(planetArray[i + 1]);
+      this[planetArray[i]] = this.ageOnPlanet(planetArray[i + 1], this.age);
     }
+  }
+
+  leftToLive(planetAge, planetYears) {
+    const leftToLivePlanet = this.ageOnPlanet(planetYears, this.lifeExpectancy);
+    return leftToLivePlanet - planetAge;
   }
 }

@@ -38,7 +38,6 @@ describe("Person", () => {
   test("should set the age value for all planets on the person object", () => {
     const person = new Person(21, 75);
     person.calculateAllAges(person.planetArray);
-    console.log(person);
     expect(person.mercuryAge).toEqual(87.5);
     expect(person.venusAge).toEqual(33.9);
     expect(person.marsAge).toEqual(11.2);
@@ -47,8 +46,8 @@ describe("Person", () => {
 
   test("should return how much you have left to live on mecuery", () => {
     const person = new Person(21, 75);
-    const mercuryAge = person.ageOnPlanet(0.24);
-    const leftToLive = person.leftToLive(mercuryAge);
+    const mercuryAge = person.ageOnPlanet(0.24, person.age);
+    const leftToLive = person.leftToLive(mercuryAge, 0.24);
 
     expect(mercuryAge).toEqual(87.5);
     expect(leftToLive).toEqual(225);
