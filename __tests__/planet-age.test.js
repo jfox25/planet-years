@@ -77,4 +77,18 @@ describe("Person", () => {
     expect(person.jupiterLeftToLive).toEqual(4.5);
     expect(person.overLifeExpectency).toEqual(false);
   });
+
+  test("should return how much you have left to live on all planets when your older than life expectency", () => {
+    const person = new Person(21, 20);
+    person.calculateAllAges(person.planetArray);
+    expect(person.mercuryAge).toEqual(87.5);
+    expect(person.venusAge).toEqual(33.9);
+    expect(person.marsAge).toEqual(11.2);
+    expect(person.jupiterAge).toEqual(1.8);
+    expect(person.mercuryLeftToLive).toEqual(4.2);
+    expect(person.venusLeftToLive).toEqual(1.6);
+    expect(person.marsLeftToLive).toEqual(0.6);
+    expect(person.jupiterLeftToLive).toEqual(0.1);
+    expect(person.overLifeExpectency).toEqual(true);
+  });
 });
