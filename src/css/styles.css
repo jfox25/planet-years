@@ -31,22 +31,33 @@ button:hover {
   border: 2px solid black;
 }
 
-.planet {
+ul {
   list-style: none;
-  background-color: black;
   color: whitesmoke;
-  width: 70%;
+  /* height: 250px; */
+  text-align: center;
+  padding-right: 55px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  /* height: 220px; */
+}
+.planet li {
+  margin-top: 10px;
+}
+.planet-container {
+  background-color: black;
+  width: 80%;
+  max-width: 750px;
   margin: auto;
   margin-top: 100px;
-  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   border-radius: 5px;
-  height: 230px;
+
+  /* align-items: center; */
 }
-.planet img {
+.planet-container img {
   width: 200px;
-  float: left;
   display: block;
-}
-.planet:last-child {
-  height: 170px;
 }

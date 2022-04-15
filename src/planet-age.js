@@ -5,16 +5,16 @@ export class Person {
     this.planetArray = [
       "Mercury",
       0.24,
-      "/assets/images/mercueryRotation.gif",
+      "../assets/images/mercueryRotation.gif",
       "Venus",
       0.62,
-      "/assets/images/venusRotation.gif",
+      "../assets/images/venusRotation.gif",
       "Mars",
       1.88,
-      "/assets/images/marsRotation.gif",
+      "../assets/images/marsRotation.gif",
       "Jupiter",
       11.86,
-      "/assets/images/jupiter.gif",
+      "../assets/images/jupiter.gif",
     ];
     this.ageArray = [];
     if (lifeExpectancy < age) {
