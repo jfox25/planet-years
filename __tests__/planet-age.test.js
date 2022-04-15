@@ -10,28 +10,28 @@ describe("Person", () => {
   test("should return the age of a person object on Mercury", () => {
     const person = new Person(21, 75);
 
-    const mercuryAge = person.ageOnPlanet(0.24);
+    const mercuryAge = person.ageOnPlanet(0.24, person.age);
     expect(mercuryAge).toEqual(87.5);
   });
 
   test("should return the age of a person object on Venus", () => {
     const person = new Person(21, 75);
 
-    const venusAge = person.ageOnPlanet(0.62);
+    const venusAge = person.ageOnPlanet(0.62, person.age);
     expect(venusAge).toEqual(33.9);
   });
 
   test("should return the age of a person object on Mars", () => {
     const person = new Person(21, 75);
 
-    const marsAge = person.ageOnPlanet(1.88);
+    const marsAge = person.ageOnPlanet(1.88, person.age);
     expect(marsAge).toEqual(11.2);
   });
 
   test("should return the age of a person object on Jupiter", () => {
     const person = new Person(21, 75);
 
-    const jupiterAge = person.ageOnPlanet(11.86);
+    const jupiterAge = person.ageOnPlanet(11.86, person.age);
     expect(jupiterAge).toEqual(1.8);
   });
 
@@ -48,7 +48,7 @@ describe("Person", () => {
   test("should return how much you have left to live on mecuery", () => {
     const person = new Person(21, 75);
     const mercuryAge = person.ageOnPlanet(0.24);
-    const leftToLive = person.leftToLive(mercuryAge, person.lifeExpectancy);
+    const leftToLive = person.leftToLive(mercuryAge);
 
     expect(mercuryAge).toEqual(87.5);
     expect(leftToLive).toEqual(225);
