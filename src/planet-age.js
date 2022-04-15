@@ -3,13 +3,13 @@ export class Person {
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
     this.planetArray = [
-      "mercuryAge",
+      "mercury",
       0.24,
-      "venusAge",
+      "venus",
       0.62,
-      "marsAge",
+      "mars",
       1.88,
-      "jupiterAge",
+      "jupiter",
       11.86,
     ];
     if (lifeExpectancy < age) {
@@ -26,7 +26,14 @@ export class Person {
 
   calculateAllAges(planetArray) {
     for (let i = 0; i < planetArray.length; i += 2) {
-      this[planetArray[i]] = this.ageOnPlanet(planetArray[i + 1], this.age);
+      this[planetArray[i] + "Age"] = this.ageOnPlanet(
+        planetArray[i + 1],
+        this.age
+      );
+      this[planetArray[i] + "LeftToLive"] = this.leftToLive(
+        this[planetArray[i] + "Age"],
+        planetArray[i + 1]
+      );
     }
   }
 
