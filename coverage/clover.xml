@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1650044866953" clover="3.2.0">
+  <project timestamp="1650044866953" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4" elements="20" coveredelements="20" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
+    <file name="planet-age.js" path="/Users/jamesfox/Desktop/Epicodus/planet_life/src/planet-age.js">
+      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <line num="3" count="10" type="stmt"/>
+      <line num="4" count="10" type="stmt"/>
+      <line num="5" count="10" type="stmt"/>
+      <line num="15" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="18" count="8" type="stmt"/>
+      <line num="23" count="32" type="stmt"/>
+      <line num="24" count="32" type="stmt"/>
+      <line num="28" count="3" type="stmt"/>
+      <line num="29" count="12" type="stmt"/>
+      <line num="33" count="12" type="stmt"/>
+      <line num="41" count="14" type="stmt"/>
+      <line num="45" count="14" type="stmt"/>
+      <line num="46" count="14" type="stmt"/>
+    </file>
+  </project>
+</coverage>
