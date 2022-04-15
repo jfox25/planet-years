@@ -4,6 +4,7 @@ export class Person {
   }
 
   ageOnPlanet(planetYears) {
-    return this.age / planetYears;
+    const ageNum = this.age / planetYears;
+    return Math.round(ageNum * 10) / 10;
   }
 }
