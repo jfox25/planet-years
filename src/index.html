@@ -5,10 +5,6 @@
   </head>
   <body>
     <h1>Calculate your age in our Solar System</h1>
-    <!-- <img src="/assets/images/jupiter.gif" alt="" />
-    <img src="/assets/images/marsRotation.gif" alt="" />
-    <img src="/assets/images/mercueryRotation.gif" alt="" />
-    <img src="/assets/images/venusRotation.gif" alt="" /> -->
     <form id="user-form">
       <label>Age:</label>
       <input id="age-input" type="number" required />
@@ -16,6 +12,10 @@
       <input id="life-input" type="number" required />
       <button type="submit">Calculate</button>
     </form>
+    <div id="loading" class="hidden">
+      <div class="loader"></div>
+      <p id="loading-item">Loading...</p>
+    </div>
     <p id="life-expect"></p>
     <div id="output"></div>
   </body>

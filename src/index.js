@@ -18,9 +18,16 @@ $("#user-form")
     const lifeExpectancy = parseInt($("#life-input").val());
     const person = new Person(age, lifeExpectancy);
     person.calculateAllAges();
-    buildUI(person);
+    $("#output").text("");
+    loading(person);
   });
-
+function loading(person) {
+  $("#loading").removeClass("hidden");
+  setTimeout(() => {
+    $("#loading").addClass("hidden");
+    buildUI(person);
+  }, 1500);
+}
 function buildUI(person) {
   let imageUrls = [
     "../assets/images/mercuery.gif",
