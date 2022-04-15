@@ -25,19 +25,25 @@ Calculates your age and life expectency on other planets
 git clone https://github.com/jfox25/planet-years
 ```
 
-2. Install all packages for this project
+2. Cd into project
+
+```
+cd planet-years
+```
+
+3. Install all packages for this project
 
 ```
 npm install
 ```
 
-3. Run the start script to open the project
+4. Run the start script to open the project
 
 ```
 npm run start
 ```
 
-4. Enter an Age and Life Expectency
+5. Enter an Age and Life Expectency
 
 ## GitHub Link
 
