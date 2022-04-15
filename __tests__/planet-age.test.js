@@ -52,4 +52,27 @@ describe("Person", () => {
     expect(mercuryAge).toEqual(87.5);
     expect(leftToLive).toEqual(225);
   });
+
+  test("should return how much your over life expetency", () => {
+    const person = new Person(21, 20);
+    const mercuryAge = person.ageOnPlanet(0.24, person.age);
+    const leftToLive = person.leftToLive(mercuryAge, 0.24);
+
+    expect(mercuryAge).toEqual(87.5);
+    expect(leftToLive).toEqual(4.2);
+    expect(person.overLifeExpectency).toEqual(true);
+  });
+
+  // test("should return how much you have left to live on all planets", () => {
+  //   const person = new Person(21, 75);
+  //   person.calculateAllAges(person.planetArray);
+  //   expect(person.mercuryAge).toEqual(87.5);
+  //   expect(person.venusAge).toEqual(33.9);
+  //   expect(person.marsAge).toEqual(11.2);
+  //   expect(person.jupiterAge).toEqual(1.8);
+  //   expect(person.leftToLiveMercury).toEqual(225);
+  //   expect(person.leftToLiveVenus).toEqual(87.1);
+  //   expect(person.leftToLiveMars).toEqual(28.7);
+  //   expect(person.leftToLiveJupiter).toEqual(4.5);
+  // });
 });
