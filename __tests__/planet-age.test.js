@@ -2,8 +2,9 @@ import { Person } from "./../src/planet-age.js";
 
 describe("Person", () => {
   test("should return the age of a person object", () => {
-    const person = new Person(21);
+    const person = new Person(21, 75);
     expect(person.age).toEqual(21);
+    expect(person.lifeExpectancy).toEqual(75);
   });
 
   test("should return the age of a person object on Mercury", () => {
@@ -32,6 +33,16 @@ describe("Person", () => {
 
     const jupiterAge = person.ageOnPlanet(11.86);
     expect(jupiterAge).toEqual(1.8);
+  });
+
+  test("should set the age value for all planets on the person object", () => {
+    const person = new Person(21);
+    person.calculateAllAges(person.planetArray);
+    console.log(person);
+    expect(person.mercuryAge).toEqual(87.5);
+    expect(person.venusAge).toEqual(33.9);
+    expect(person.marsAge).toEqual(11.2);
+    expect(person.jupiterAge).toEqual(1.8);
   });
 
   test("should set the age value for all planets on the person object", () => {
