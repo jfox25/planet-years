@@ -38,10 +38,10 @@ describe("Person", () => {
   test("should set the age value for all planets on the person object", () => {
     const person = new Person(21, 75);
     person.calculateAllAges();
-    expect(person.mercuryAge).toEqual(87.5);
-    expect(person.venusAge).toEqual(33.9);
-    expect(person.marsAge).toEqual(11.2);
-    expect(person.jupiterAge).toEqual(1.8);
+    expect(person.ageArray[0][0]).toEqual(87.5);
+    expect(person.ageArray[1][0]).toEqual(33.9);
+    expect(person.ageArray[2][0]).toEqual(11.2);
+    expect(person.ageArray[3][0]).toEqual(1.8);
   });
 
   test("should return how much you have left to live on mecuery", () => {
@@ -67,28 +67,28 @@ describe("Person", () => {
   test("should return how much you have left to live on all planets", () => {
     const person = new Person(21, 75);
     person.calculateAllAges();
-    expect(person.mercuryAge).toEqual(87.5);
-    expect(person.venusAge).toEqual(33.9);
-    expect(person.marsAge).toEqual(11.2);
-    expect(person.jupiterAge).toEqual(1.8);
-    expect(person.mercuryLeftToLive).toEqual(225);
-    expect(person.venusLeftToLive).toEqual(87.1);
-    expect(person.marsLeftToLive).toEqual(28.7);
-    expect(person.jupiterLeftToLive).toEqual(4.5);
+    expect(person.ageArray[0][0]).toEqual(87.5);
+    expect(person.ageArray[1][0]).toEqual(33.9);
+    expect(person.ageArray[2][0]).toEqual(11.2);
+    expect(person.ageArray[3][0]).toEqual(1.8);
+    expect(person.ageArray[0][1]).toEqual(225);
+    expect(person.ageArray[1][1]).toEqual(87.1);
+    expect(person.ageArray[2][1]).toEqual(28.7);
+    expect(person.ageArray[3][1]).toEqual(4.5);
     expect(person.overLifeExpectency).toEqual(false);
   });
 
   test("should return how much you have left to live on all planets when your older than life expectency", () => {
     const person = new Person(21, 20);
     person.calculateAllAges();
-    expect(person.mercuryAge).toEqual(87.5);
-    expect(person.venusAge).toEqual(33.9);
-    expect(person.marsAge).toEqual(11.2);
-    expect(person.jupiterAge).toEqual(1.8);
-    expect(person.mercuryLeftToLive).toEqual(4.2);
-    expect(person.venusLeftToLive).toEqual(1.6);
-    expect(person.marsLeftToLive).toEqual(0.6);
-    expect(person.jupiterLeftToLive).toEqual(0.1);
+    expect(person.ageArray[0][0]).toEqual(87.5);
+    expect(person.ageArray[1][0]).toEqual(33.9);
+    expect(person.ageArray[2][0]).toEqual(11.2);
+    expect(person.ageArray[3][0]).toEqual(1.8);
+    expect(person.ageArray[0][1]).toEqual(4.2);
+    expect(person.ageArray[1][1]).toEqual(1.6);
+    expect(person.ageArray[2][1]).toEqual(0.6);
+    expect(person.ageArray[3][1]).toEqual(0.1);
     expect(person.overLifeExpectency).toEqual(true);
   });
 });

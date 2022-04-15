@@ -12,6 +12,7 @@ export class Person {
       "jupiter",
       11.86,
     ];
+    this.ageArray = [];
     if (lifeExpectancy < age) {
       this.overLifeExpectency = true;
     } else {
@@ -24,16 +25,21 @@ export class Person {
     return Math.round(ageNum * 10) / 10;
   }
 
-  calculateAllAges(planetArray) {
-    for (let i = 0; i < planetArray.length; i += 2) {
-      this[planetArray[i] + "Age"] = this.ageOnPlanet(
-        planetArray[i + 1],
-        this.age
-      );
-      this[planetArray[i] + "LeftToLive"] = this.leftToLive(
-        this[planetArray[i] + "Age"],
-        planetArray[i + 1]
-      );
+  calculateAllAges() {
+    for (let i = 0; i < this.planetArray.length; i += 2) {
+      let array = [];
+      const planetAge = this.ageOnPlanet(this.planetArray[i + 1], this.age);
+      array.push(planetAge);
+      array.push(this.leftToLive(planetAge, this.planetArray[i + 1]));
+      // this[this.planetArray[i] + "Age"] = this.ageOnPlanet(
+      //   this.planetArray[i + 1],
+      //   this.age
+      // );
+      // this[this.planetArray[i] + "LeftToLive"] = this.leftToLive(
+      //   this[this.planetArray[i] + "Age"],
+      //   this.planetArray[i + 1]
+      // );
+      this.ageArray.push(array);
     }
   }
 
