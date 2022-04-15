@@ -1,6 +1,7 @@
 export class Person {
-  constructor(age) {
+  constructor(age, lifeExpectancy) {
     this.age = age;
+    this.lifeExpectancy = lifeExpectancy;
     this.planetArray = [
       "mercuryAge",
       0.24,
