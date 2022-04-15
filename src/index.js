@@ -16,5 +16,16 @@ $("#user-form")
   });
 
 function buildUI(person) {
+  let string;
+  if (person.overLifeExpectency) {
+    string = "Over Life Expectancy By: ";
+  } else {
+    string = "Life Expectancy Remaining: ";
+  }
   let output = $("#output");
+  person.ageArray.forEach((element) => {
+    $(output).append(
+      `<ul><li>${element[2]}:</li><li>Age on Planet: ${element[0]} years</li><li>${string}${element[1]} years</li></ul>`
+    );
+  });
 }

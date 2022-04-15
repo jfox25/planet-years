@@ -3,13 +3,13 @@ export class Person {
     this.age = age;
     this.lifeExpectancy = lifeExpectancy;
     this.planetArray = [
-      "mercury",
+      "Mercury",
       0.24,
-      "venus",
+      "Venus",
       0.62,
-      "mars",
+      "Mars",
       1.88,
-      "jupiter",
+      "Jupiter",
       11.86,
     ];
     this.ageArray = [];
@@ -31,14 +31,7 @@ export class Person {
       const planetAge = this.ageOnPlanet(this.planetArray[i + 1], this.age);
       array.push(planetAge);
       array.push(this.leftToLive(planetAge, this.planetArray[i + 1]));
-      // this[this.planetArray[i] + "Age"] = this.ageOnPlanet(
-      //   this.planetArray[i + 1],
-      //   this.age
-      // );
-      // this[this.planetArray[i] + "LeftToLive"] = this.leftToLive(
-      //   this[this.planetArray[i] + "Age"],
-      //   this.planetArray[i + 1]
-      // );
+      array.push(this.planetArray[i]);
       this.ageArray.push(array);
     }
   }
