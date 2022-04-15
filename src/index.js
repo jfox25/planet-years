@@ -25,7 +25,7 @@ function buildUI(person) {
   let output = $("#output");
   person.ageArray.forEach((element) => {
     $(output).append(
-      `<ul><li>${element[2]}:</li><li>Age on Planet: ${element[0]} years</li><li>${string}${element[1]} years</li></ul>`
+      `<ul><li>${element[2]}:</li><li>Age on Planet: ${element[0]} years</li><li>${string}${element[1]} years</li><li><img src='${element[3]}'></li></ul>`
     );
   });
 }
