@@ -33,4 +33,13 @@ describe("Person", () => {
     const jupiterAge = person.ageOnPlanet(11.86);
     expect(jupiterAge).toEqual(1.8);
   });
+
+  test("should set the age value for all planets on the person object", () => {
+    const person = new Person(21);
+    person.ageOnPlanet(person.planetArray);
+    expect(this.mercuryAge).toEqual(87.5);
+    expect(this.venusAge).toEqual(33.9);
+    expect(this.marsAge).toEqual(11.2);
+    expect(this.jupiterAge).toEqual(1.8);
+  });
 });
