@@ -12,6 +12,11 @@ export class Person {
       "jupiterAge",
       11.86,
     ];
+    if (lifeExpectancy < age) {
+      this.overLifeExpectency = true;
+    } else {
+      this.overLifeExpectency = false;
+    }
   }
 
   ageOnPlanet(planetYears, age) {
@@ -26,7 +31,11 @@ export class Person {
   }
 
   leftToLive(planetAge, planetYears) {
-    const leftToLivePlanet = this.ageOnPlanet(planetYears, this.lifeExpectancy);
-    return leftToLivePlanet - planetAge;
+    const lifeExpecentyPlanet = this.ageOnPlanet(
+      planetYears,
+      this.lifeExpectancy
+    );
+    const leftToLive = lifeExpecentyPlanet - planetAge;
+    return Math.abs(Math.round(leftToLive * 10) / 10);
   }
 }
