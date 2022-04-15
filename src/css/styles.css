@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(105, 104, 104);
+  color: black;
+  font-size: 22px;
+  text-align: center;
+}
+input {
+  background: black;
+  color: rgb(105, 104, 104);
+  border: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  max-width: 400px;
+}
+button {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: black;
+  color: rgb(105, 104, 104);
+  border: 2px solid transparent;
+  transition: all 0.5s;
+}
+button:hover {
+  background-color: rgb(105, 104, 104);
+  color: black;
+  border: 2px solid black;
+}
+
+.planet {
+  list-style: none;
+  background-color: black;
+  color: whitesmoke;
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 230px;
+}
+.planet img {
+  width: 200px;
+  float: left;
+  display: block;
+}
+.planet:last-child {
+  height: 170px;
+}
