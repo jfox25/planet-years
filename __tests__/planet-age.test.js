@@ -27,7 +27,7 @@ describe("Person", () => {
     expect(marsAge).toEqual(11.2);
   });
 
-  test("should return the age of a person object on Mars", () => {
+  test("should return the age of a person object on Jupiter", () => {
     const person = new Person(21);
 
     const jupiterAge = person.ageOnPlanet(11.86);
