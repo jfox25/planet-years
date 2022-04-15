@@ -24,6 +24,6 @@ describe("Person", () => {
     const person = new Person(21);
 
     const marsAge = person.ageOnPlanet(1.88);
-    expect(marsAge).toEqual(11.8);
+    expect(marsAge).toEqual(11.2);
   });
 });
