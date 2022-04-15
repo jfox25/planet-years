@@ -26,4 +26,11 @@ describe("Person", () => {
     const marsAge = person.ageOnPlanet(1.88);
     expect(marsAge).toEqual(11.2);
   });
+
+  test("should return the age of a person object on Mars", () => {
+    const person = new Person(21);
+
+    const jupiterAge = person.ageOnPlanet(11.86);
+    expect(jupiterAge).toEqual(1.8);
+  });
 });
