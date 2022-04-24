@@ -17,6 +17,7 @@ $("#user-form")
     const age = parseInt($("#age-input").val());
     const lifeExpectancy = parseInt($("#life-input").val());
     const person = new Person(age, lifeExpectancy);
+    person.isOverLifeExpectency(age, lifeExpectancy);
     person.calculateAllAges();
     $("#output").text("");
     loading(person);

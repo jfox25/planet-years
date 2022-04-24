@@ -12,6 +12,7 @@ A website that shows you your age and life expectency on different planets in ou
 - GIT
 - Webpack
 - Jest
+- Node
 
 ## Info
 
@@ -44,6 +45,12 @@ npm run start
 ```
 
 5. Enter an Age and Life Expectency
+
+6. Run the test script to see tests
+
+```
+npm run test
+```
 
 ## GitHub Link
 

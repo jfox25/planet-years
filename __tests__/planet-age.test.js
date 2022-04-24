@@ -46,6 +46,7 @@ describe("Person", () => {
 
   test("should return how much you have left to live on mecuery", () => {
     const person = new Person(21, 75);
+    person.isOverLifeExpectency(21, 75);
     const mercuryAge = person.ageOnPlanet(0.24, person.age);
     const leftToLive = person.leftToLive(mercuryAge, 0.24);
 
@@ -56,9 +57,9 @@ describe("Person", () => {
 
   test("should return how much your over life expetency", () => {
     const person = new Person(21, 20);
+    person.isOverLifeExpectency(21, 20);
     const mercuryAge = person.ageOnPlanet(0.24, person.age);
     const leftToLive = person.leftToLive(mercuryAge, 0.24);
-
     expect(mercuryAge).toEqual(87.5);
     expect(leftToLive).toEqual(4.2);
     expect(person.overLifeExpectency).toEqual(true);
@@ -66,6 +67,7 @@ describe("Person", () => {
 
   test("should return how much you have left to live on all planets", () => {
     const person = new Person(21, 75);
+    person.isOverLifeExpectency(21, 75);
     person.calculateAllAges();
     expect(person.ageArray[0][0]).toEqual(87.5);
     expect(person.ageArray[1][0]).toEqual(33.9);
@@ -80,6 +82,7 @@ describe("Person", () => {
 
   test("should return how much you have left to live on all planets when your older than life expectency", () => {
     const person = new Person(21, 20);
+    person.isOverLifeExpectency(21, 20);
     person.calculateAllAges();
     expect(person.ageArray[0][0]).toEqual(87.5);
     expect(person.ageArray[1][0]).toEqual(33.9);

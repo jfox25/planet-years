@@ -13,6 +13,9 @@ export class Person {
       11.86,
     ];
     this.ageArray = [];
+  }
+
+  isOverLifeExpectency(age, lifeExpectancy) {
     if (lifeExpectancy < age) {
       this.overLifeExpectency = true;
     } else {
